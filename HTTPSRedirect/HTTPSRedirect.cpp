@@ -93,6 +93,7 @@ bool HTTPSRedirect::printRedir(void){
             // Make a new connection to the re-direction server
             if (!connect(_redirHost.c_str(), _httpsPort)) {
               Serial.println("Connection to re-directed URL failed!");
+              Serial.println("Checking Github");
               return false;
             }
 
